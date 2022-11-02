@@ -1,0 +1,43 @@
+<?xml version="1.0"?>
+<listadoConsumos>
+    <consumo nitCliente="2019160-k" idInstancia="I-340">
+        <tiempo> 2.6 </tiempo>
+        <fechaHora>  esto es la fecha 15/06/2005  </fechaHora>
+    </consumo>
+    <consumo nitCliente="2019160-k" idInstancia="I-336">
+        <tiempo> 1 </tiempo>
+        <fechaHora> esto es la fecha 19/07/2009 y 25/12/2019 </fechaHora>
+    </consumo>
+    <consumo nitCliente="2019160-k" idInstancia="I-336">
+        <tiempo> 5.18 </tiempo>
+        <fechaHora> esto es la fecha 14/08/2010</fechaHora>
+    </consumo>
+    <consumo nitCliente="1159328-6" idInstancia="I-732">
+        <tiempo> 7.5 </tiempo>
+        <fechaHora> esto es la fecha 03/05/2012 </fechaHora>
+    </consumo>
+    <consumo nitCliente="6362564-2" idInstancia="I-419">
+        <tiempo> 2.9 </tiempo>
+        <fechaHora> esto es la fecha 21/11/2017 </fechaHora>
+    </consumo>
+    <consumo nitCliente="2019160-k" idInstancia="I-340">
+        <tiempo> 3.5 </tiempo>
+        <fechaHora>  esto es la fecha 16/06/2009  </fechaHora>
+    </consumo>
+    <consumo nitCliente="2019160-k" idInstancia="I-336">
+        <tiempo> 5 </tiempo>
+        <fechaHora> esto es la fecha 13/02/2006 y 25/12/2019 </fechaHora>
+    </consumo>
+    <consumo nitCliente="1159328-6" idInstancia="I-732">
+        <tiempo> 4.3 </tiempo>
+        <fechaHora> esto es la fecha 06/07/2030</fechaHora>
+    </consumo>
+    <consumo nitCliente="1159328-6" idInstancia="I-732">
+        <tiempo> 4.5 </tiempo>
+        <fechaHora> esto es la fecha 09/11/2010 </fechaHora>
+    </consumo>
+    <consumo nitCliente="6362564-2" idInstancia="I-419">
+        <tiempo> 2.9 </tiempo>
+        <fechaHora> esto es la fecha 21/11/2017 </fechaHora>
+    </consumo>
+</listadoConsumos>

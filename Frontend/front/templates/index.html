@@ -1,11 +1,12 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="ico.ico" />
-    <link rel="stylesheet" href="/Frontend/front/static/Estilos.css" type="text/css">
+    <link rel="shortcut icon" href="{% static 'ico.ico' %}" />
+    <link rel="stylesheet" href="{% static 'estilos.css' %}" type="text/css">
     <title>Menú - Inicio</title>
 </head>
 
@@ -15,27 +16,27 @@
 
             <li class="list__item">
                 <div class="list__button">
-                    <img src="assets/dashboard.svg" class="list__img">
-                    <a href="#" class="nav__link">Inicio</a>
+                    <img src="{% static 'dashboard.svg' %}" class="list__img">
+                    <a href="" class="nav__link">Inicio</a>
                 </div>
             </li>
             <li class="list__item">
                 <div class="list__button">
-                    <img src="assets/stats.svg" class="list__img">
-                    <a href="#" class="nav__link">Emviar mensaje de configuración</a>
+                    <img  src="{% static 'message.svg' %}" class="list__img">
+                    <a href="#" class="nav__link">Enviar mensaje de configuración</a>
                 </div>
             </li>
             <li class="list__item">
                 <div class="list__button">
-                    <img src="assets/stats.svg" class="list__img">
-                    <a href="#" class="nav__link">Envair mensaje de consumo</a>
+                    <img src="{% static 'message.svg' %}" class="list__img">
+                    <a href="#" class="nav__link">Enviar mensaje de consumo</a>
                 </div>
             </li>
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
-                    <img src="assets/docs.svg" class="list__img">
-                    <a href="#" class="nav__link">Opciones del sistema</a>
-                    <img src="assets/arrow.svg" class="list__arrow">
+                    <img src="{% static 'menu-hamburguesa.svg' %}" class="list__img">
+                    <a  class="nav__link">Opciones del sistema</a>
+                    <img src="{% static 'arrow.svg'%}" class="list__arrow">
                 </div>
 
                 <ul class="list__show">
@@ -49,31 +50,43 @@
                     <li class="list__inside">
                         <a href="#" class="nav__link nav__link--inside">Proceso de facturación</a>
                     </li>
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Reportes en PDF</a>
-                    </li>
                 </ul>
 
             </li>
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
-                    <img src="assets/message.svg" class="list__img">
-                    <a href="#" class="nav__link">Ayuda</a>
-                    <img src="assets/arrow.svg" class="list__arrow">
+                    <img src="{% static 'PDF.svg' %}" class="list__img">
+                    <a  class="nav__link">Facturas (PDF)    </a>
+                    <img src="{% static 'arrow.svg'%}" class="list__arrow">
                 </div>
-
                 <ul class="list__show">
                     <li class="list__inside">
                         <a href="#" class="nav__link nav__link--inside">Detalle de factura</a>
                     </li>
-
                     <li class="list__inside">
                         <a href="#" class="nav__link nav__link--inside">Análisis de ventas</a>
                     </li>
                 </ul>
             </li>
+            <li class="list__item list__item--click">
+                <div class="list__button list__button--click">
+                    <img src="{% static 'docs.svg' %}" class="list__img">
+                    <a  class="nav__link">Ayuda</a>
+                    <img src="{% static 'arrow.svg'%}" class="list__arrow">
+                </div>
+
+                <ul class="list__show">
+                    <li class="list__inside">
+                        <a target="_blank" href="{% url 'autor' %}" class="nav__link nav__link--inside">Autor</a>
+                    </li>
+
+                    <li class="list__inside">
+                        <a target="_blank" href="https://drive.google.com/file/d/1S7omyLv3zTi68tdKZUtFmN-DYGTglbGs/view?usp=sharing" class="nav__link nav__link--inside">Documentacion</a>
+                    </li>
+                </ul>
+            </li>
         </ul>
     </nav>
-    <script src="main.js"></script>
+    <script src="{% static 'main.js' %}"></script>
 </body>
 </html>

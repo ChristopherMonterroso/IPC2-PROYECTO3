@@ -13,6 +13,6 @@ class Instancias:
         self.id_instancia=id_instancia
         self.id_configuracion=id_configuracion
         self.nombre=nombre
-        self.fechaIinicio=fechaInicio
+        self.fechaInicio=fechaInicio
         self.estado=estado
         self.fechaFinal=fechaFinal

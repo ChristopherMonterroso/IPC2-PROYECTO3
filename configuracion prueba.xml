@@ -1,0 +1,233 @@
+<?xml version="1.0"?>
+<archivoConfiguraciones>
+    <listaRecursos>
+        <recurso id="RA-960">
+            <nombre> XTECH Fuente de Poder Generica </nombre>
+            <abreviatura> PSU </abreviatura>
+            <metrica> 500W </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 30 </valorXhora>
+        </recurso>
+        <recurso id="RA-961">
+            <nombre> Gigabyte Fuente de Poder </nombre>
+            <abreviatura> PSU </abreviatura>
+            <metrica> 750W </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 35 </valorXhora>
+        </recurso>
+        <recurso id="RA-962">
+            <nombre> Cougar ARUIC 650 Fuente de Poder Modular </nombre>
+            <abreviatura> PSU</abreviatura>
+            <metrica> 650W </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 70 </valorXhora>
+        </recurso>
+        <recurso id="RB-540">
+            <nombre> ADATA Unidad de Estado Solido </nombre>
+            <abreviatura> SSD </abreviatura>
+            <metrica> 120GB </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 20.5 </valorXhora>
+        </recurso>
+        <recurso id="RB-543">
+            <nombre> SSD Kingston A400 </nombre>
+            <abreviatura> SSD </abreviatura>
+            <metrica> 240GB </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 10 </valorXhora>
+        </recurso>
+        <recurso id="RB-544">
+            <nombre> Procesador Intel Core i5 9400 </nombre>
+            <abreviatura> CPU </abreviatura>
+            <metrica> 2.9Ghz 6 Nucleos </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 45.8 </valorXhora>
+        </recurso>
+        <recurso id="RB-545">
+            <nombre> Intel Procesador Core i7-11700 </nombre>
+            <abreviatura> CPU </abreviatura>
+            <metrica> 2.5GHz LGA1200 11th Gen </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 87.2 </valorXhora>
+        </recurso>
+        <recurso id="RB-546">
+            <nombre> Intel Procesador Core i9-11900K </nombre>
+            <abreviatura> CPU </abreviatura>
+            <metrica> 3.5GHz LGA1200 11th Gen </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 115.2 </valorXhora>
+        </recurso>
+        <recurso id="RC-830">
+            <nombre> Memoria RAM DDR4 Kingston </nombre>
+            <abreviatura> RAM </abreviatura>
+            <metrica>  4GB / 2666 Mhz </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 12.3 </valorXhora>
+        </recurso>
+        <recurso id="RC-831">
+            <nombre> Crucial Memoria RAM DDR4 </nombre>
+            <abreviatura> RAM </abreviatura>
+            <metrica> 8GB 2666MHz </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 27 </valorXhora>
+        </recurso>
+        <recurso id="RC-832">
+            <nombre> Corsair Memoria RAM DDR4 DRAM Vengeance LPX </nombre>
+            <abreviatura> RAM </abreviatura>
+            <metrica> 8GB / 2666Mhz </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 19.6 </valorXhora>
+        </recurso>
+        <recurso id="RD-220">
+            <nombre> MSI GeForce GT 730 </nombre>
+            <abreviatura> GPU </abreviatura>
+            <metrica>  2GB DDR3 </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 130 </valorXhora>
+        </recurso>
+        <recurso id="RD-221">
+            <nombre> Gigabyte Tarjeta de Video Gaming GeForde GTX 1660 Ti OC </nombre>
+            <abreviatura> GPU </abreviatura>
+            <metrica>  6GB GDDR6 </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 363 </valorXhora>
+        </recurso>
+        <recurso id="RD-222">
+            <nombre> EVGA Tarjeta de Video NVIDIA GeForce RTX 3080 Ti </nombre>
+            <abreviatura> GPU </abreviatura>
+            <metrica>  12GB GDDR6X FTW3 </metrica>
+            <tipo> Hardware </tipo>
+            <valorXhora> 426.4 </valorXhora>
+        </recurso>
+    </listaRecursos>
+    <listaCategorias>
+        <categoria id="CA-215">
+            <nombre> Categoria de prueba 1 </nombre>
+            <descripcion> Esta es una descripcion estandar de la categoria 1 </descripcion>
+            <cargaTrabajo> Alta </cargaTrabajo>
+            <listaConfiguraciones>
+                <configuracion id="CO-001">
+                    <nombre> Configuracion 1 </nombre>
+                    <descripcion> descripcion de la configuracion 1 </descripcion>
+                    <recursosConfiguracion>
+                        <recurso id="RB-544"> 2 </recurso>
+                        <recurso id="RC-831"> 1 </recurso>
+                        <recurso id="RD-221"> 3 </recurso>
+                        <recurso id="RA-960"> 1 </recurso>
+                    </recursosConfiguracion>
+                </configuracion>
+                <configuracion id="CO-024">
+                    <nombre> Configuracion 2 </nombre>
+                    <descripcion> descripcion de la configuracion 2 </descripcion>
+                    <recursosConfiguracion>
+                        <recurso id="RA-961"> 1 </recurso>
+                        <recurso id="RA-962"> 1 </recurso>
+                        <recurso id="RD-221"> 2 </recurso>
+                        <recurso id="RD-220"> 4 </recurso>
+                    </recursosConfiguracion>
+                </configuracion>
+            </listaConfiguraciones>
+        </categoria>
+        <categoria id="CA-297">
+            <nombre> Categoria de prueba 2 </nombre>
+            <descripcion> Esta es una descripcion estandar de la categoria 2 </descripcion>
+            <cargaTrabajo> Media </cargaTrabajo>
+            <listaConfiguraciones>
+                <configuracion id="CO-001">
+                    <nombre> Configuracion 1 </nombre>
+                    <descripcion> descripcion de la configuracion 1 </descripcion>
+                    <recursosConfiguracion>
+                        <recurso id="RB-544"> 2 </recurso>
+                        <recurso id="RC-831"> 1 </recurso>
+                        <recurso id="RD-221"> 3 </recurso>
+                        <recurso id="RA-960"> 1 </recurso>
+                    </recursosConfiguracion>
+                </configuracion>
+                <configuracion id="CO-711">
+                    <nombre> Configuracion 3 </nombre>
+                    <descripcion> descripcion de la configuracion 3 </descripcion>
+                    <recursosConfiguracion>
+                        <recurso id="RA-961"> 1 </recurso>
+                        <recurso id="RB-546"> 2 </recurso>
+                        <recurso id="RC-832"> 1 </recurso>
+                        <recurso id="RB-543"> 2 </recurso>
+                    </recursosConfiguracion>
+                </configuracion>
+            </listaConfiguraciones>
+        </categoria>
+        <categoria id="CA-299">
+            <nombre> Categoria de prueba 3 </nombre>
+            <descripcion> Esta es una descripcion estandar de la categoria 3 </descripcion>
+            <cargaTrabajo> Baja </cargaTrabajo>
+            <listaConfiguraciones>
+                <configuracion id="CO-111">
+                    <nombre> Configuracion 4 </nombre>
+                    <descripcion> descripcion de la configuracion 4 </descripcion>
+                    <recursosConfiguracion>
+                        <recurso id="RB-544"> 3 </recurso>
+                        <recurso id="RC-832"> 2 </recurso>
+                        <recurso id="RD-222"> 4 </recurso>
+                        <recurso id="RC-830"> 1 </recurso>
+                    </recursosConfiguracion>
+                </configuracion>
+            </listaConfiguraciones>
+        </categoria>
+    </listaCategorias>
+    <listaClientes>
+        <cliente nit="2019160-k">
+            <nombre> David </nombre>
+            <usuario> dnoriega </usuario>
+            <clave> 123456 </clave>
+            <direccion> av 8 nueva direccion de prueba </direccion>
+            <correoElectronico> correo1@gmail.com </correoElectronico>
+            <listaInstancias>
+                <instancia id="I-340">
+                    <idConfiguracion> CO-111 </idConfiguracion>
+                    <nombre> Primera instancia </nombre>
+                    <fechaInicio> esta es una descripcion de la fecha 26/02/2003 </fechaInicio>
+                    <estado> Activa </estado>
+                    <fechaFinal> N/A </fechaFinal>
+                </instancia>
+                <instancia id="I-336">
+                    <idConfiguracion> CO-001 </idConfiguracion>
+                    <nombre> Segunda instancia </nombre>
+                    <fechaInicio> esta es una descripcion de la fecha 26/02/2003 </fechaInicio>
+                    <estado> Cancelada </estado>
+                    <fechaFinal> 27/06/2009 </fechaFinal>
+                </instancia>
+            </listaInstancias>
+        </cliente>
+        <cliente nit="1159328-6">
+            <nombre> Jacky </nombre>
+            <usuario> Jacks128 </usuario>
+            <clave> qwerty </clave>
+            <direccion> nueva direccion de prueba </direccion>
+            <correoElectronico> correo2@yahoo.com </correoElectronico>
+            <listaInstancias>
+                <instancia id="I-732">
+                    <idConfiguracion> CO-024 </idConfiguracion>
+                    <nombre> Tercera instancia </nombre>
+                    <fechaInicio> esta es una descripcion de la fecha 12/09/2015 </fechaInicio>
+                    <estado> Activa </estado>
+                    <fechaFinal> N/A </fechaFinal>
+                </instancia>
+            </listaInstancias>
+        </cliente>
+        <cliente nit="6362564-2">
+            <nombre> Carlos </nombre>
+            <usuario> Cdelamarca623 </usuario>
+            <clave> password1 </clave>
+            <direccion> direccion 4 </direccion>
+            <correoElectronico> correo3@hotmail.com </correoElectronico>
+            <listaInstancias>
+                <instancia id="I-419">
+                    <idConfiguracion> CO-711 </idConfiguracion>
+                    <nombre> Cuarta instancia </nombre>
+                    <fechaInicio> esta es una descripcion de la fecha 28/06/1998 y para ver que agarre la primera 30/08/2005</fechaInicio>
+                    <estado> Cancelada </estado>
+                    <fechaFinal> la instancia fue cerrada el 15/12/2009 </fechaFinal>
+                </instancia>
+            </listaInstancias>
+        </cliente>
+    </listaClientes>
+</archivoConfiguraciones>
