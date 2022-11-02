@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clientes</title>
+</head>
+
+<body>
+    <h2 style="text-align: center;">Tabla de clientes</h2>
+    <table style="height: 54px; width: 90%; border-collapse: collapse; margin-left: auto; margin-right: auto;"
+        border="3">
+        <tbody>
+            <tr style="height: 36px;background-color: #62f669">
+                <td style="width: 15%; height: 36px; text-align: center;">NIT</td>
+                <td style="width: 15%; height: 36px; text-align: center;">Nombre</td>
+                <td style="width: 15%; height: 36px; text-align: center;">usuario</td>
+                <td style="width: 15%; height: 36px; text-align: center;">clave</td>
+                <td style="width: 15%; height: 36px; text-align: center;">direccion</td>
+                <td style="width: 15%; height: 36px; text-align: center;">email</td>
+            </tr>
+            {% for cliente in clientes %}
+            <tr style="height: 18px;background-color: #FFFFFF">
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.id}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.nombre}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.usuario}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.clave}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.direccion}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.email}}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    <h2 style="text-align: center;">Instancias</h2>
+    <table style="height: 54px; width: 90%; border-collapse: collapse; margin-left: auto; margin-right: auto;"
+    border="3">
+        <tbody>
+            <tr style="height: 36px;background-color: #62a2f6">
+                <td style="width: 15%; height: 36px; text-align: center;">ID instancia</td>
+                <td style="width: 15%; height: 36px; text-align: center;">ID Config</td>
+                <td style="width: 15%; height: 36px; text-align: center;">nombre</td>
+                <td style="width: 15%; height: 36px; text-align: center;">fecha Inicio</td>
+                <td style="width: 15%; height: 36px; text-align: center;">Estado</td>
+                <td style="width: 15%; height: 36px; text-align: center;">fecha final</td>
+            </tr>
+            {% for cliente in clientes %}
+            <tr style="height: 18px;background-color: #FFFFFF">
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.id_instancia}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.id_configuracion}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.i_nombre}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.fecha_inicio}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.estado}}</td>
+                <td style="width: 15%; height: 18px; text-align: center;">{{cliente.fechafinal}}</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</body>
+
+</html>

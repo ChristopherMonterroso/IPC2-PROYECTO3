@@ -109,7 +109,19 @@ class Gestor:
                     }
                     json.append(instancia)
         return json
-                
+
+    def getCategorias(self):
+        json=[]
+        for i in self.categorias:
+            categoria={
+                'Datos':'Categorias',
+                'id':i.id,
+                'nombre':i.nombre,
+                'descripcion':i.descripcion,
+                'carga_de_Trabajo':i.cargaTrabajo
+            }
+            json.append(categoria)
+        return json
     def getRecursos(self):
         json=[]
         for i in self.recursos:
@@ -119,11 +131,39 @@ class Gestor:
                 'abreviatura':i.abreviatura,
                 'metrica':i.metrica,
                 'tipo':i.tipo,
-                'valor/hora':i.valor_x_hora
+                'valorxhora':i.valor_x_hora
             }
             json.append(recurso)
         return json
 
+    def getClientes(self):
+        json=[]
+        for i in self.clientes:
+            cliente={
+                'Datos':'Cliente',
+                'id':i.nit,
+                'nombre':i.nombre,
+                'usuario':i.usuario,
+                'clave':i.clave,
+                'direccion':i.direccion,
+                'email':i.email
+            }
+            json.append(cliente)
+            for j in i.lista_instancias:
+                if j.estado==" Activa ":
+                    instancia={
+                        'Datos':'Instancia',
+                        'id_instancia':j.id_instancia,
+                        'id_configuracion':j.id_configuracion,
+                        'i_nombre':j.nombre,
+                        'fecha_inicio':j.fechaInicio,
+                        'estado':j.estado,
+                        'fechafinal':j.fechaFinal
+                    }
+                    json.append(instancia)
+        
+        return json
+    
     def getFacturaDetalle(self):
         pass
     

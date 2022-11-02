@@ -1,0 +1,46 @@
+
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+
+    <title>Crear configuracion</title>
+ </head>
+ <body>
+    <div class="container py-4">
+        <h1 style="text-align: center;"> Crear configuracion </h1>
+      </div>
+      <div class="container py-5">
+      <div class="row">
+          <div class="col">
+            {% if form.errors %}
+            <p style="color: red;"> Por favor, completa todos los campos, todos son necesarios </p>
+            {% endif %}
+              <form action="/Crear-configuracion/" method="POST">
+                  {% csrf_token %}
+                  <div class="mb-3">
+                      <label for="name" class="form-label">ID categoria:</label>
+                      <input type="text" class="form-control" id="id_categoria" name ="id_categoria">
+                  </div>
+                    <div class="mb-3">
+                      <label for="artist" class="form-label">ID:</label>
+                      <input type="text" class="form-control" id="id" name ="id">
+                      </div>
+                  <div class="mb-3">
+                    <label for="album" class="form-label">Nombre:</label>
+                    <input type="text" class="form-control" id="nombre" name ="nombre">
+                  </div>
+                  <div class="mb-3">
+                    <label for="image" class="form-label">Descripcion:</label>
+                    <input type="text" class="form-control" id="descripcion" name="descripcion"> 
+                  </div>
+                  <button type="submit" class="btn btn-dark btn-lg">Crear configuracion</button>
+                </form>
+              </div>
+          </div>
+      </div>
+ </body>
+ </html>

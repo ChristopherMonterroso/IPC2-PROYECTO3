@@ -12,59 +12,60 @@
 
 <body>
     <nav class="nav">
-        <ul class="list">
-
-            <li class="list__item">
-                <div class="list__button">
-                    <img src="{% static 'dashboard.svg' %}" class="list__img">
-                    <a href="" class="nav__link">Inicio</a>
-                </div>
-            </li>
+        <ul class="list"> 
             <li class="list__item">
                 <div class="list__button">
                     <img  src="{% static 'message.svg' %}" class="list__img">
-                    <a href="#" class="nav__link">Enviar mensaje de configuración</a>
+                    <a href="{% url 'cargaConfig' %}" class="nav__link">Enviar mensaje de configuración</a>
                 </div>
             </li>
             <li class="list__item">
                 <div class="list__button">
                     <img src="{% static 'message.svg' %}" class="list__img">
-                    <a href="#" class="nav__link">Enviar mensaje de consumo</a>
+                    <a href="{% url 'cargaConsu' %}" class="nav__link">Enviar mensaje de consumo</a>
                 </div>
             </li>
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
                     <img src="{% static 'menu-hamburguesa.svg' %}" class="list__img">
-                    <a  class="nav__link">Opciones del sistema</a>
+                    <a  class="nav__link">Creacion de nuevos datos</a>
                     <img src="{% static 'arrow.svg'%}" class="list__arrow">
                 </div>
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Consultar datos</a>
-                    </li>
-
-                    <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Creación de nuevos datos</a>
+                        <a href="{% url 'crearRecurso' %}" class="nav__link nav__link--inside">Recurso</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Proceso de facturación</a>
+                        <a href="{% url 'crearCategoria' %}" class="nav__link nav__link--inside">Categoria</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="{% url 'crearConfiguracion' %}" class="nav__link nav__link--inside">Configuracion</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="{% url 'crearCliente' %}" class="nav__link nav__link--inside">Cliente</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="{% url 'crearInstancia' %}" class="nav__link nav__link--inside">Instancia</a>
                     </li>
                 </ul>
-
             </li>
+            
             <li class="list__item list__item--click">
                 <div class="list__button list__button--click">
-                    <img src="{% static 'PDF.svg' %}" class="list__img">
-                    <a  class="nav__link">Facturas (PDF)    </a>
+                    <img src="{% static 'menu-hamburguesa.svg' %}" class="list__img">
+                    <a  class="nav__link">Consulta de Datos    </a>
                     <img src="{% static 'arrow.svg'%}" class="list__arrow">
                 </div>
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Detalle de factura</a>
+                        <a href="{% url 'consultaRecursos' %}" class="nav__link nav__link--inside">Recursos</a>
                     </li>
                     <li class="list__inside">
-                        <a href="#" class="nav__link nav__link--inside">Análisis de ventas</a>
+                        <a href="{% url 'consultaClientes' %}" class="nav__link nav__link--inside">Clientes</a>
+                    </li>
+                    <li class="list__inside">
+                        <a href="{% url 'consultaCategorias' %}" class="nav__link nav__link--inside">Categorias</a>
                     </li>
                 </ul>
             </li>
@@ -77,11 +78,11 @@
 
                 <ul class="list__show">
                     <li class="list__inside">
-                        <a target="_blank" href="{% url 'autor' %}" class="nav__link nav__link--inside">Autor</a>
+                        <a target="_blank" href="https://drive.google.com/file/d/1S7omyLv3zTi68tdKZUtFmN-DYGTglbGs/view?usp=share_link" class="nav__link nav__link--inside">Autor</a>
                     </li>
 
                     <li class="list__inside">
-                        <a target="_blank" href="https://drive.google.com/file/d/1S7omyLv3zTi68tdKZUtFmN-DYGTglbGs/view?usp=sharing" class="nav__link nav__link--inside">Documentacion</a>
+                        <a target="_blank" href="https://drive.google.com/file/d/1gKagL2EfPuajre1HIvpZX4KTY8N-6MEn/view?usp=share_link" class="nav__link nav__link--inside">Documentacion</a>
                     </li>
                 </ul>
             </li>

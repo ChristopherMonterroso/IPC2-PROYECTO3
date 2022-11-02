@@ -29,6 +29,11 @@ def agregarConfiguraciones():
                 gestor.setInstancias(clientes.attrib['nit'],instancia.attrib['id'],instancia[0].text,instancia[1].text,instancia[2].text,instancia[3].text,instancia[4].text)   
                 contInstancias+=1
             contClientes+=1
+            print({
+              "Archivo": "cargado exitosamente",
+              "Clientes creados":contClientes,
+              "Instancias creadas":contInstancias
+            })
         return jsonify(
             {"Archivo": "cargado exitosamente",
               "Clientes creados":contClientes,
@@ -49,6 +54,7 @@ def agregarConsumos():
         for consumo in archivo:
             gestor.setConsumos(consumo.attrib['nitCliente'],consumo.attrib['idInstancia'],consumo[0].text,consumo[1].text)
             contConsumo+=1
+
         return jsonify({
             "archivo":"Cargado exitosamente",
             "consumos procesados":contConsumo
@@ -92,6 +98,16 @@ def setInstancia():
 def getRecursos():
     recursos=gestor.getRecursos()
     return jsonify(recursos),200
+
+@app.route('/getClientes',methods=['GET'])
+def getClientes():
+    clientes=gestor.getClientes()
+    return jsonify(clientes),200
+
+@app.route('/getCategorias',methods=['GET'])
+def getCategorias():
+    clientes=gestor.getCategorias()
+    return jsonify(clientes),200
 
 @app.route('/consultarDatos',methods=['GET'])
 def getDatos():
