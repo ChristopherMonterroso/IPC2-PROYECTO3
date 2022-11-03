@@ -1,0 +1,36 @@
+Factura: 1
+NIT: 2019160-k
+Fecha: 2005-06-15
+Monto a pagar: 4925.699999999999
+Factura: 2
+NIT: 2019160-k
+Fecha: 2009-07-19
+Monto a pagar: 1237.6
+Factura: 3
+NIT: 2019160-k
+Fecha: 2010-08-14
+Monto a pagar: 6410.767999999999
+Factura: 4
+NIT: 1159328-6
+Fecha: 2012-05-03
+Monto a pagar: 10132.5
+Factura: 5
+NIT: 6362564-2
+Fecha: 2017-11-21
+Monto a pagar: 884.5
+Factura: 6
+NIT: 2019160-k
+Fecha: 2009-06-16
+Monto a pagar: 6630.75
+Factura: 7
+NIT: 2019160-k
+Fecha: 2006-02-13
+Monto a pagar: 6188.0
+Factura: 9
+NIT: 1159328-6
+Fecha: 2010-11-09
+Monto a pagar: 6079.5
+Factura: 10
+NIT: 6362564-2
+Fecha: 2017-11-21
+Monto a pagar: 884.5

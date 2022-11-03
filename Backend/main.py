@@ -1,9 +1,29 @@
 from flask  import Flask,request
 from flask.json import jsonify
 from flask_cors import CORS
+import re
+import datetime
 from gestor import Gestor
 from xml.etree import ElementTree as ET
 from DateTime import Timezones
+from fpdf import FPDF
+from facturas import factura
+class PDF(FPDF):
+    def texts(self,name):
+        with open(name,"rb") as xy:
+            txt=xy.read().decode('latin-1')
+        self.set_xy(10.0,80.0)
+        self.set_text_color(68,50,50)
+        self.set_font('Arial',"",12)
+        self.multi_cell(0,10,txt)
+
+    def titles(self,title):
+        self.set_xy(0.0,0.0)
+        self.set_font('Arial','B',16)
+        self.set_text_color(220,50,50)
+        self.cell(w=210.0,h=40.0,align="C",txt=title,border=0)
+        
+
 app=Flask(__name__)
 app.config['DEBUG']=True
 CORS(app)
@@ -108,7 +128,10 @@ def getClientes():
 def getCategorias():
     clientes=gestor.getCategorias()
     return jsonify(clientes),200
-
+@app.route('/getConsumos',methods=['GET'])
+def getConsumos():
+    clientes=gestor.getConsumos()
+    return jsonify(clientes),200
 @app.route('/consultarDatos',methods=['GET'])
 def getDatos():
     recursos=gestor.consultarDatos()
@@ -120,6 +143,110 @@ def getFacturaDetalle():
 @app.route('/generarFacturaAnalisis',methods=['GET'])
 def getFacturaAnalisis():
     gestor.getFacturaAnalisis()
+
+@app.route("/generarFacturas",methods=['POST'])
+def getFacuta():
+    facturas=1
+    json=request.get_json()
+    Existe=False
+    contenido=""
+    monto=0
+    rango_inicial=json['fechaInicial']
+    rango=rango_inicial.split("/")
+    fecha1=datetime.date(int(rango[2]),int(rango[1]),int(rango[0]))  
+    rango_final=json['fechaFinal']
+    rango_2=rango_final.split("/")
+    fecha2=datetime.date(int(rango_2[2]),int(rango_2[1]),int(rango_2[0]))
+    consumos = gestor.consumos
+    clientes= gestor.clientes
+    categorias= gestor.categorias
+    recuros= gestor.recursos
+    for i in consumos:
+        fecha_c=i.fechaHora
+        fecha_numero=fecha_c.split("/")
+        fecha_consumo=datetime.date(int(fecha_numero[2]),int(fecha_numero[1]),int(fecha_numero[0]))
+        tiempoi=i.tiempo
+        
+        if fecha_consumo>=fecha1 and fecha_consumo<=fecha2:
+            numero=str(facturas)
+            contenido+="Factura: "+str(facturas)
+            for j in clientes:
+                if j.nit == i.nit:
+                    usuario=j
+            contenido+="\nNIT: "+usuario.nit
+            nit=usuario.nit
+            for  l in usuario.lista_instancias:
+                if l.id_instancia==i.id_instancia:
+                    instancia=l
+            contenido+="\nFecha: "+str(fecha_consumo)
+            cns=str(fecha_consumo)
+            for c in categorias:
+                instancia.id_configuracion= instancia.id_configuracion.replace(" ","")
+                for confi in c.configuraciones:
+                    if(confi.id ==instancia.id_configuracion):
+                      
+                        configuracion=confi
+            for r in configuracion.recursosConfiguracion:
+                for r2 in recuros:
+                    if r.id==r2.id_recurso:
+                        aporte=(float(r2.valor_x_hora))*float(tiempoi)*float(r.cantidad)
+                        monto=monto + aporte
+            contenido+="\nMonto a pagar: "+str(monto)+"\n"
+            gestor.facturas.append(factura(numero,nit,cns,monto))
+        facturas+=1
+        monto=0
+    ruta= open("facturas.txt",'w')
+    ruta.write(contenido)
+    ruta.close()
+    pdf = PDF()
+    pdf.add_page()
+    pdf.titles("Facturas")
+    pdf.texts("facturas.txt")
+    pdf.output("Facturas.pdf")
+    return jsonify({"mensaje":"Facturas generadas"})
+
+@app.route("/reporteRecursos", methods=['GET'])
+def reportRecur():
+    lista = gestor.recursos
+
+    contenido=""
+    for r in lista:
+        contenido+="ID:"+str(r.id_recurso)+"\n"
+        contenido+="Nombre: "+str(r.nombre)+"\n"
+        contenido+="Monto:" +str(r.valor_x_hora)+"\n"
+
+    ruta= open("rec.txt",'w')
+    ruta.write(contenido)
+    ruta.close()
+    pdf = PDF()
+    pdf.add_page()
+    pdf.titles("Recrusos con mas ingresos")
+    pdf.texts("rec.txt")
+    pdf.output("Recursos.pdf")
+    return jsonify({"mensaje":"PDF generado"})
+@app.route("/getFactura",methods=['POST'])
+def factur():
+    json=request.get_json()
+    contenido= ""
+    nFactura=json["factura:"]
+    facturas = gestor.facturas
+    for i in facturas:
+        if nFactura==i.numero:
+            contenido+="Factura"+str(i.numero)+"\nNit del cliente: "+str(i.nit)+"\nFecha de consumo:"+str(i.fecha)+"\n Monto a pagar:"+str(i.monto)
+    ruta= open("factura.txt",'w')
+    ruta.write(contenido)
+    ruta.close()
+    pdf = PDF()
+    pdf.add_page()
+    pdf.titles("Factura")
+    pdf.texts("factura.txt")
+    pdf.output("Factura.pdf")
+    return jsonify({"mensaje":"Factura generada"})
+
+
+
+
+
 
 @app.route('/abrirAutor',methods=['GET'])
 def getAutor():

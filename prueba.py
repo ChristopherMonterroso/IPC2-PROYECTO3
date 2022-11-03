@@ -1,11 +1,17 @@
 import xml.etree.ElementTree as ET
+import re
 
-tree= ET.parse('archivo_consumos.xml')
-archivo = tree.getroot()
-for consumo in archivo:
-    print(consumo.attrib['nitCliente']," - ",consumo.attrib['idInstancia'])
-    print(consumo[0].text)
-    print(consumo[1].text)
+expresion="^(?:3[01]|[12][0-9]|0?[1-9])([\-/.])(0?[1-9]|1[1-2])\1\d{4}$"
+
+x="esta es una descripcion de la fecha 22/02/2016, 22/03/2020"
+s = re.compile(r'(\d{2})/(\d{2})/(\d{4})')
+fecha = s.search(x)
+
+try:
+    print(fecha)
+except:
+    print("N/A")
+
 
 """for recursos in archivo[0]:
     print("ID:",recursos.attrib['id'])

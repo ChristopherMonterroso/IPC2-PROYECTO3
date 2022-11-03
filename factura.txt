@@ -1,0 +1,4 @@
+Factura1
+Nit del cliente: 2019160-k
+Fecha de consumo:2005-06-15
+ Monto a pagar:4925.699999999999

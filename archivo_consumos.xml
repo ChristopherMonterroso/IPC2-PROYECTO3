@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <listadoConsumos>
     <consumo nitCliente="2019160-k" idInstancia="I-340">
-        <tiempo> 2.6 </tiempo>
+        <tiempo>2.6</tiempo>
         <fechaHora>  esto es la fecha 15/06/2005  </fechaHora>
     </consumo>
     <consumo nitCliente="2019160-k" idInstancia="I-336">

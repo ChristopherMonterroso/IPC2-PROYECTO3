@@ -18,7 +18,7 @@
             {% if form.errors %}
             <p style="color: red;"> Por favor, completa todos los campos, todos son necesarios </p>
             {% endif %}
-              <form action="/add/" method="POST">
+              <form action="/Crear-instancia/" method="POST">
                   {% csrf_token %}
                   <div class="mb-3">
                       <label for="name" class="form-label">NIT:</label>
@@ -30,7 +30,7 @@
                       </div>
                   <div class="mb-3">
                     <label for="album" class="form-label">ID configuracion:</label>
-                    <input type="text" class="form-control" id="id_c" name ="id_C">
+                    <input type="text" class="form-control" id="id_c" name ="id_c">
                   </div>
                   <div class="mb-3">
                     <label for="image" class="form-label">Nombre:</label>

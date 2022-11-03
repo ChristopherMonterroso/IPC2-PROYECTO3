@@ -1,0 +1,42 @@
+ID:RA-960
+Nombre: XTECH Fuente de Poder Generica
+Monto:30
+ID:RA-961
+Nombre:  Gigabyte Fuente de Poder 
+Monto:35
+ID:RA-962
+Nombre:  Cougar ARUIC 650 Fuente de Poder Modular 
+Monto:70
+ID:RB-540
+Nombre:  ADATA Unidad de Estado Solido 
+Monto:20.5
+ID:RB-543
+Nombre:  SSD Kingston A400 
+Monto:10
+ID:RB-544
+Nombre:  Procesador Intel Core i5 9400 
+Monto:45.8
+ID:RB-545
+Nombre:  Intel Procesador Core i7-11700 
+Monto:87.2
+ID:RB-546
+Nombre:  Intel Procesador Core i9-11900K 
+Monto:115.2
+ID:RC-830
+Nombre:  Memoria RAM DDR4 Kingston 
+Monto:12.3
+ID:RC-831
+Nombre:  Crucial Memoria RAM DDR4 
+Monto:27
+ID:RC-832
+Nombre:  Corsair Memoria RAM DDR4 DRAM Vengeance LPX 
+Monto:19.6
+ID:RD-220
+Nombre:  MSI GeForce GT 730 
+Monto:130
+ID:RD-221
+Nombre:  Gigabyte Tarjeta de Video Gaming GeForde GTX 1660 Ti OC 
+Monto:363
+ID:RD-222
+Nombre:  EVGA Tarjeta de Video NVIDIA GeForce RTX 3080 Ti 
+Monto:426.4

@@ -4,12 +4,12 @@ class FileForm(forms.Form):
     forms.FileField(label="file")
 
 class AddFormRecurso(forms.Form):
-   id_recurso = forms.CharField(label="id")
+   id_recurso = forms.CharField(label="id_recurso")
    nombre = forms.CharField(label="nombre")
-   abreviatura = forms.CharField(label="siglas")
+   abreviatura = forms.CharField(label="abreviatura")
    metrica = forms.CharField(label="metrica") 
    tipo = forms.CharField(label="tipo") 
-   valor_x_hora = forms.CharField(label="valorXhora") 
+   valor_x_hora = forms.CharField(label="valor_X_hora") 
 
 class AddFormCategoria(forms.Form):
    id = forms.CharField(label="id")

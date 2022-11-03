@@ -18,7 +18,7 @@
             {% if form.errors %}
             <p style="color: red;"> Por favor, completa todos los campos, todos son necesarios </p>
             {% endif %}
-              <form action="/add/" method="POST">
+              <form action="/Crear-cliente/" method="POST">
                   {% csrf_token %}
                   <div class="mb-3">
                       <label for="name" class="form-label">NIT:</label>
@@ -34,7 +34,7 @@
                   </div>
                   <div class="mb-3">
                     <label for="image" class="form-label">Clave:</label>
-                    <input type="text" class="form-control" id="clave" name="calve"> 
+                    <input type="text" class="form-control" id="clave" name="clave"> 
                   </div>
                   <div class="mb-3">
                     <label for="image" class="form-label">direccion:</label>
